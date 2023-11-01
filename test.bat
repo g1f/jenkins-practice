@@ -1,0 +1,1 @@
+selenium-side-runner C:\Users\gifva\_dev\automation-selenium-ide\bestbuy\firefox\bestbuy.side --config-file "C:\Users\gifva\_dev\automation-selenium-ide\bestbuy\firefox\.side.yml"

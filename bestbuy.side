@@ -1,0 +1,1877 @@
+{
+  "id": "a70a844b-eacf-4d60-a868-caf17f7161a5",
+  "version": "2.0",
+  "name": "Bestbuy",
+  "url": "https://www.bestbuy.com/",
+  "tests": [{
+    "id": "1b207dee-162b-4cab-894d-fd2ba307f976",
+    "name": "0-0-0_test-url",
+    "commands": [{
+      "id": "259ce1e5-600a-48bf-b04e-aaa663b44a3d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.com/",
+      "targets": [],
+      "value": "base_URL"
+    }, {
+      "id": "d6689b92-4685-477a-a0fd-31ed909e8e86",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27cb067a-f7dc-4260-a121-a20149b5d22a",
+      "comment": "",
+      "command": "if",
+      "target": "document.title=\"Best Buy | Official Online Store | Shop Now & Save\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87a04aa6-8ac7-4d17-a979-1c925642f2df",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "024bd1de-3dca-4f26-988c-60b616ce6639",
+    "name": "0-1_sign-in-default",
+    "commands": [{
+      "id": "32b29804-8cb1-4277-bfe6-942e68dd8ca9",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-0_test-url",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afc9ace2-70df-4db9-8c74-37f263505080",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-1_test-data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4201d2a-6e66-4233-a14d-11054848ce1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-p-right-xxs:nth-child(2)",
+      "targets": [
+        ["css=.v-p-right-xxs:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='account-menu-account-button']/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8a21779-9bba-4db8-adfd-7b90591637ee",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.c-button-secondary",
+      "targets": [
+        ["css=.c-button-secondary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": "15000"
+    }, {
+      "id": "dd91701f-7c48-499c-bb71-786be553ec4b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign In",
+      "targets": [
+        ["linkText=Sign In", "linkText"],
+        ["css=.sign-in-btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//div[@id='shop-account-menu-8233218']/div/div/div/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/identity/global/signin')]", "xpath:href"],
+        ["xpath=//li/div/div/div/div/div/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a70bca93-6b8d-4289-86d5-f7e8092cf7d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [
+        ["id=fld-e", "id"],
+        ["name=fld-e", "name"],
+        ["css=#fld-e", "css:finder"],
+        ["xpath=//input[@id='fld-e']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${username}"
+    }, {
+      "id": "d599a813-27ba-477c-bac7-14a24fce14b3",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [
+        ["id=fld-p1", "id"],
+        ["name=fld-p1", "name"],
+        ["css=#fld-p1", "css:finder"],
+        ["xpath=//input[@id='fld-p1']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "954def18-0284-4864-bc2b-a12a276d6aa9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7fbcbb75-186c-4281-9902-c5873d14a399",
+    "name": "1-1-1_sign-in-with-valid-credentials",
+    "commands": [{
+      "id": "176a6a5f-53fc-4040-9b54-7cf6d6863b44",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-1_test-data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70ffddb2-3534-4f2f-b8eb-0a05bd24cb16",
+      "comment": "",
+      "command": "run",
+      "target": "0-1_sign-in-default",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2c79ca3-44ea-4fbf-89ba-a552425c9a3f",
+      "comment": "",
+      "command": "run",
+      "target": "0-6_sign-in-validation",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c67cdeae-9e7e-4c60-999a-4577b6f9d6f5",
+    "name": "0-2_sign-out-default",
+    "commands": [{
+      "id": "5ef7c55b-6f54-4302-adcd-79be8fc9feaa",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-0_test-url",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a8cf196-459f-4b0d-b1a4-5007eef793ce",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.v-p-right-xxs:nth-child(2)",
+      "targets": [
+        ["css=.v-p-right-xxs:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='account-menu-account-button']/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "e449f034-fcfd-4e82-8783-dfe9b23277e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-p-right-xxs:nth-child(2)",
+      "targets": [
+        ["css=.v-p-right-xxs:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='account-menu-account-button']/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hi, Test')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cffab702-0c1c-4f9b-8dce-a2d9aa4a1fc7",
+      "comment": "",
+      "command": "click",
+      "target": "id=logout-button-bby",
+      "targets": [
+        ["id=logout-button-bby", "id"],
+        ["css=#logout-button-bby", "css:finder"],
+        ["xpath=//button[@id='logout-button-bby']", "xpath:attributes"],
+        ["xpath=//div[@id='shop-account-menu-9263434']/div/div/div/div/div/div/div[2]/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0786cc54-76c5-427b-a75c-2eab351e6cd8",
+    "name": "1-1-2_sign-in-with-invalid-username",
+    "commands": [{
+      "id": "c76a9fb0-fb98-4427-b57b-d20544b1d053",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-1_test-data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b72ac3e8-9e51-479f-a11e-13dd669f060d",
+      "comment": "",
+      "command": "run",
+      "target": "1-0-0_sign-in-page-opens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fe2727d-e67e-4f30-a065-bdf81253639c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [
+        ["id=fld-e", "id"],
+        ["name=fld-e", "name"],
+        ["css=#fld-e", "css:finder"],
+        ["xpath=//input[@id='fld-e']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "12345user"
+    }, {
+      "id": "6ce16e1c-8364-4bf3-936d-3fbf70220ec6",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [
+        ["id=fld-p1", "id"],
+        ["name=fld-p1", "name"],
+        ["css=#fld-p1", "css:finder"],
+        ["xpath=//input[@id='fld-p1']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "f70a6980-4665-4f86-bea3-14dc1120b1d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [
+        ["css=.c-button-secondary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c897336-2fc3-45de-8e4e-58221013dd1f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e61fe068-997b-4a51-9346-3f506774af55",
+    "name": "1-1-3_sign-in-with-invalid-password",
+    "commands": [{
+      "id": "00df4a2a-734f-4627-810c-779ecc755e30",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-1_test-data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71cdfc4c-e532-4a4e-8a50-351157534003",
+      "comment": "",
+      "command": "run",
+      "target": "1-0-0_sign-in-page-opens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f3c7cd9-3375-4acf-bca1-87a318d24504",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [
+        ["id=fld-e", "id"],
+        ["name=fld-e", "name"],
+        ["css=#fld-e", "css:finder"],
+        ["xpath=//input[@id='fld-e']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${username}"
+    }, {
+      "id": "2e6d15da-090a-48a5-bb38-9fb387a7ae37",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [
+        ["id=fld-p1", "id"],
+        ["name=fld-p1", "name"],
+        ["css=#fld-p1", "css:finder"],
+        ["xpath=//input[@id='fld-p1']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "my-pass"
+    }, {
+      "id": "d631ad2e-4fea-4696-9665-0ee0d30475df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [
+        ["css=.c-button-secondary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f989625a-f919-48de-818d-9f3e16a6c0a1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d171aefb-6664-41df-bbf2-dee5627e7393",
+    "name": "1-1-4_sign-in-with-invalid-username-(variations)",
+    "commands": [{
+      "id": "8825127d-bf84-43b8-b95c-13374c56eedb",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-1_test-data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ee13e21-a87f-4117-b3fa-ca25fe856d27",
+      "comment": "",
+      "command": "run",
+      "target": "1-0-0_sign-in-page-opens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adb43826-a266-49d2-933d-8648cdd0b690",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [
+        ["id=fld-e", "id"],
+        ["name=fld-e", "name"],
+        ["css=#fld-e", "css:finder"],
+        ["xpath=//input[@id='fld-e']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cd052b1-cd75-4c7b-84c9-e7b2930ed723",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [
+        ["id=fld-p1", "id"],
+        ["name=fld-p1", "name"],
+        ["css=#fld-p1", "css:finder"],
+        ["xpath=//input[@id='fld-p1']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "c5ad73c2-6758-487c-b18b-a129bec30443",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [
+        ["css=.c-button-secondary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0e41fed-bac5-4eac-8f42-65c532f75acb",
+      "comment": "",
+      "command": "run",
+      "target": "0-4_username-field-validation",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d0c5d8e8-07c4-4466-8fbb-c344d482829c",
+    "name": "1-1-5_sign-in-with-invalid-password-(variations)",
+    "commands": [{
+      "id": "b1c14fbf-336e-4c16-b4b1-9b4bd9ecb556",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-1_test-data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "624b5581-cca7-4e17-8a4c-e9a26e787a4a",
+      "comment": "",
+      "command": "run",
+      "target": "1-0-0_sign-in-page-opens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "790f86f4-ef35-4257-aa49-e39496361770",
+      "comment": "",
+      "command": "run",
+      "target": "0-5_password-field-validation",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "abd3fdf2-b3be-4cfe-b162-ce960b43d4e6",
+    "name": "0-3_sign-in/sign-out default",
+    "commands": [{
+      "id": "d5a2dee1-7116-4af7-a43a-bf2815893a08",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-0_test-url",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55dc72e9-bb09-4544-bccd-3d28408f5ec1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-p-right-xxs:nth-child(2)",
+      "targets": [
+        ["css=.v-p-right-xxs:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='account-menu-account-button']/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f87735c5-a7e3-4658-9d08-7a33f477a6fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign In",
+      "targets": [
+        ["linkText=Sign In", "linkText"],
+        ["css=.sign-in-btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//div[@id='shop-account-menu-8233218']/div/div/div/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/identity/global/signin')]", "xpath:href"],
+        ["xpath=//li/div/div/div/div/div/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "116baf64-4cd8-48ee-9f6a-38e696066eb7",
+      "comment": "",
+      "command": "click",
+      "target": "id=fld-e",
+      "targets": [
+        ["id=fld-e", "id"],
+        ["name=fld-e", "name"],
+        ["css=#fld-e", "css:finder"],
+        ["xpath=//input[@id='fld-e']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6827e6dd-df6e-4996-8a6b-b826f15384f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [
+        ["id=fld-e", "id"],
+        ["name=fld-e", "name"],
+        ["css=#fld-e", "css:finder"],
+        ["xpath=//input[@id='fld-e']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${username}"
+    }, {
+      "id": "980b2392-5c65-47dc-8ea8-8f67b17d00d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=div > .cdi-input",
+      "targets": [
+        ["css=div > .cdi-input", "css:finder"],
+        ["xpath=//form/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef8a7037-05e1-4409-bc98-b6995839a592",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [
+        ["id=fld-p1", "id"],
+        ["name=fld-p1", "name"],
+        ["css=#fld-p1", "css:finder"],
+        ["xpath=//input[@id='fld-p1']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "a2ce3a8a-6948-4d33-ae2c-eb52eb67b067",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff55572b-8c1d-40b2-a92a-d2649efbd30c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-p-right-xxs:nth-child(2)",
+      "targets": [
+        ["css=.v-p-right-xxs:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='account-menu-account-button']/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Hi, Test')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad1ab7a6-c5a4-43fe-af2d-b36f17624ddc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=logout-button-bby",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "c0f971fa-b78f-4a9d-8956-e698ec0c70e1",
+    "name": "0-4_username-field-validation",
+    "commands": [{
+      "id": "68e3cbbc-129c-471f-a28c-4000829823cd",
+      "comment": "empty field",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8515677f-1ad2-434b-befb-ef1764970309",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95f923ff-fb2d-4507-ba2b-b91cdb0ee3df",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c749cdf-fde6-4e73-a095-36ae2281a725",
+      "comment": "only symbols",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "! @ # $ % ^ * ( ) - + = [ ] ; : ' \" < > , / ? | ="
+    }, {
+      "id": "770b870f-2109-442d-a6a1-07128c7490d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd30b1ee-2144-474d-b921-05649df785e2",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87aa4cf0-50a9-428d-bd09-069a9d3a68c1",
+      "comment": "XSS",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "<input type=\"text\">"
+    }, {
+      "id": "c2bb3523-ddaf-461e-a928-194ebb730f98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad563103-54c7-4bad-bc70-3ea028bf9a57",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bcc25cbf-0f4c-4ceb-9fd5-cf5e85428aeb",
+      "comment": "SQL",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "SELECT * FROM users"
+    }, {
+      "id": "9c7d7549-7080-46e5-ab64-f02d2fbee6b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fd7f7df-8ca0-4d6e-8552-c570875a6b4c",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8142cee7-1415-4a97-8b5f-e84a43ffeee3",
+      "comment": "before @",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "g1fv4n4test2@"
+    }, {
+      "id": "b3016081-4a6e-4940-870c-2d45d0a5fb6e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0716c798-c546-4f25-b0b9-5f895928114b",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "679e5d37-3e1d-4b0f-8267-928de70f43ff",
+      "comment": "@ after",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "@gmail.com"
+    }, {
+      "id": "025372af-b183-4693-871c-3cde1ee6735d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be5d73de-b060-4952-bb03-ab92678d7b73",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac98f7e4-b498-40a5-aff2-66552727a6f8",
+      "comment": "missing @",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "g1fv4n4test2gmail.com"
+    }, {
+      "id": "f8c7e099-cf61-4d45-956e-0d75cdebe1e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "430bedcc-6f8e-4b20-950c-6ea206717914",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90e41b0c-d19e-431e-b8a6-5d6e5fa8e108",
+      "comment": "missing dot in domain",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "g1fv4n4test2@gmailcom"
+    }, {
+      "id": "b7371cbc-834e-4568-a118-0ab4c07d65e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4efa0310-2e33-4a91-bed4-089ba95ed8d9",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a731dfd-7fe7-4151-a7ac-d7c00a1c167e",
+      "comment": "wrong domain",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "g1fv4n4test2@gmail.ru"
+    }, {
+      "id": "7c3913ac-e9ec-4eff-b00d-b89d9d8d3541",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4686783d-9f3d-4cae-94ba-4d4becc26d45",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b919e5b-8503-4e70-aed7-2679582a8f2e",
+      "comment": "cyrillic domain",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "g1fv4n4test2@почта.рф"
+    }, {
+      "id": "e88ba39f-2569-47be-aa13-4afd3be8e0f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d925bdf6-f851-45a0-9f69-5f0933ece8fe",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12ac7c56-7a89-4c40-88a3-4b490d4f3638",
+      "comment": "too long > 320",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "frefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34tr"
+    }, {
+      "id": "a366e1d5-398d-45e5-9603-1269eceb1b7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d71afe35-a5fa-4cdd-a24f-f00350a84763",
+      "comment": "",
+      "command": "run",
+      "target": "0-7_sign-in-notice-email-validation",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "24a2cc37-0abd-4cf5-8f64-f6905d332a05",
+    "name": "0-0-1_test-data",
+    "commands": [{
+      "id": "d21fce4a-b6d3-4bc2-9995-8011aa5d2c53",
+      "comment": "",
+      "command": "store",
+      "target": "my-test-pass-123456789!",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "1b2ad553-6778-45b0-af94-9bbb82a2450f",
+      "comment": "",
+      "command": "store",
+      "target": "g1fv4n4test2@gmail.com",
+      "targets": [],
+      "value": "username"
+    }]
+  }, {
+    "id": "dc52d14a-b7f7-4cbd-8ff9-68a284015cb9",
+    "name": "0-6_sign-in-validation",
+    "commands": [{
+      "id": "72cd5e28-bde8-487f-9c47-ebb4c68d5e98",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27310a25-4c68-4cf3-912f-e9bedae5cf59",
+      "comment": "",
+      "command": "times",
+      "target": "1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6223245d-b785-4a76-9821-f4a7ffcfb507",
+      "comment": "",
+      "command": "if",
+      "target": "document.getElementsByClassName(\"c-section-title cia-section-title cia-section-title__header heading-5 v-fw-medium\").length !==0",
+      "targets": [],
+      "value": "Sign In to Best Buy"
+    }, {
+      "id": "99bb430a-79c8-4e48-9830-b62332b9f785",
+      "comment": "",
+      "command": "run",
+      "target": "0-1_sign-in-default",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa8e9ed2-21f2-4374-bd57-ccd6f8d138b8",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "364f9c76-2b72-4149-91c9-0b300fda3ea4",
+      "comment": "",
+      "command": "run",
+      "target": "0-2_sign-out-default",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9e42e7e-a719-420f-82c3-fd21cbba86e7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8710133-efc6-4fc3-a422-4846bd6bfa74",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f600e63e-2a30-484b-886b-79531e32ab22",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.c-section-title",
+      "targets": [
+        ["css=.c-section-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Sign In to Best Buy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "eb64064d-1bbc-49af-807f-3b80f0a9b2a5",
+    "name": "0-5_password-field-validation",
+    "commands": [{
+      "id": "842f94f3-fe46-4319-8fc3-fc621b6af5de",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-1_test-data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92e5ab1b-ea46-45fe-a133-5d683cdf9ee3",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "8312ec5b-b023-4850-af27-3bccf1a40faa",
+      "comment": "empty field",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8236cf53-3b40-4ed7-9cb2-16369dc9b561",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "4494c8b2-81e7-47f2-adc3-bf30936bb3c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "968876c2-5c30-4f04-b912-476e3b778233",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcfa3975-9155-4357-9b6f-4b5a7cc30cbb",
+      "comment": "only symbols",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "! @ # $ % ^ * ( ) - + = [ ] ; : ' \" < > , / ? | ="
+    }, {
+      "id": "b140ce6b-d977-4a14-97fe-04f867e63eaa",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "613d517e-29d9-493d-8604-c7cc0b49c11d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e5ad781-6be9-446d-b1a4-a3fb51179461",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7bfa847-339c-4954-8dda-669f33418b2f",
+      "comment": "XSS",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "<input type=\"text\">"
+    }, {
+      "id": "3b2d18e7-4238-45d7-8d1d-28399aee6613",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "2e480bd8-e703-47be-8d91-925eeff91536",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8f83cfa-fd3c-4d1c-8db0-bcf02cff250b",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a15a2f8-3e72-49cf-a586-5edbdb874d0d",
+      "comment": "SQL",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "SELECT * FROM users"
+    }, {
+      "id": "2cd46b8c-b8ee-4460-b1f1-fd972c79e2a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "ea5574b6-2502-49aa-9978-66ff991a4a9e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d8cd5ab-6ede-4723-819c-631342028554",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b5b14ac-4505-4d6a-a678-08b7c3900aa1",
+      "comment": "before @",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "g1fv4n4test2@"
+    }, {
+      "id": "f1d96ad9-7ccc-4cb5-859a-5745d782ba1e",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "03d6bdf0-7d31-4139-b8b6-e9f014570f92",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1a0258a-c4fd-46d0-b248-43ef8d2777e8",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd1356a2-a736-419d-a946-3249f3b6aa5f",
+      "comment": "@ after",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "@gmail.com"
+    }, {
+      "id": "0ab86798-a140-4fdc-adb9-ed3269cd18d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "b879c800-bb31-4837-a857-2118587e2f67",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47d3e793-9d7d-4900-bdea-08c68fecd1a1",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81cd9cc6-5cc2-4900-8efc-6a211e5db73b",
+      "comment": "missing @",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "g1fv4n4test2gmail.com"
+    }, {
+      "id": "7f6f04ec-f057-46db-b66b-4ec815908e32",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "c98320e6-3fb6-404c-9328-f028f0d2e31d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c601b5df-6182-438e-a5ef-cf334ce0a09a",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d51b390d-96bd-41dd-a4ef-92a341aea046",
+      "comment": "missing dot in domain",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "g1fv4n4test2@gmailcom"
+    }, {
+      "id": "a6147278-64b0-4265-954b-61bc846bc66a",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "455de8ac-c2e7-4765-9a15-4992247b1702",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe2a0f2b-bd81-42d1-97fb-9f48ae00e2b5",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3811569-0aec-492c-8fbe-a32f0a9ec7b3",
+      "comment": "wrong domain",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "g1fv4n4test2@gmail.ru"
+    }, {
+      "id": "7af03603-ef6b-431a-b691-5e16fa7cbef1",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "dda68d89-8c49-46c5-bdd6-834597138e7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3b35e02-3890-44c6-a8f1-6768cf4cee0b",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f5487d0-6411-4ffa-9298-c503b30fc482",
+      "comment": "cyrillic domain",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "g1fv4n4test2@почта.рф"
+    }, {
+      "id": "e1160a2f-253f-4a32-9203-ab2e92a71b04",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "49357b89-c300-4f7e-94bc-f0b23b07d67e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de0154b8-eee8-467b-a2d2-3d82d60fb944",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6589bafd-aa60-436b-a085-656dc0299141",
+      "comment": "too long > 320",
+      "command": "type",
+      "target": "id=fld-p1",
+      "targets": [],
+      "value": "frefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34trfrefe32rcv34qt43tr3crc32rc32rc23c3w4t342t324tv42t3tv34tr"
+    }, {
+      "id": "65fdcb30-41e8-4fef-b83d-95c1859a9cf8",
+      "comment": "",
+      "command": "type",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": "${username}"
+    }, {
+      "id": "e65fe13a-abaa-4f9c-a6ac-958c936c4bac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button-secondary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20504ec0-33e2-4e6c-a0ef-9334156780c6",
+      "comment": "",
+      "command": "run",
+      "target": "0-8_sign-in-notice-password-validation",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e4ca3ff0-fa42-48a8-be0d-660562eb7313",
+    "name": "0-7_sign-in-notice-email-validation",
+    "commands": [{
+      "id": "2c20bf1d-cde6-40d4-8dbe-ed1f20aab4be",
+      "comment": "",
+      "command": "if",
+      "target": "document.getElementsByClassName(\"tb-validation\").length !==0",
+      "targets": [
+        ["css=strong > div", "css:finder"],
+        ["xpath=//strong/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5195ce46-c5c9-49eb-ad70-b06b8d7ef221",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p",
+      "targets": [],
+      "value": "Please enter a valid email address."
+    }, {
+      "id": "bcad9039-2d70-484e-8de2-0407773ff2f7",
+      "comment": "",
+      "command": "elseIf",
+      "target": "document.getElementsByClassName(\"c-alert-content rounded-r-100 flex-fill v-bg-pure-white p-200 pl-none\").length !==0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66758174-9a49-4aed-85fa-f3dbb97b5a63",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=strong > div",
+      "targets": [],
+      "value": "Oops! The email or password did not match our records. Please try again."
+    }, {
+      "id": "2ab51be2-26c6-4e1d-97db-34cf9096c889",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c1d8178-255b-4c61-9050-ff1e06acd3ae",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8c9f948c-ef07-4843-b962-721f92d99610",
+    "name": "0-8_sign-in-notice-password-validation",
+    "commands": [{
+      "id": "b8bd3b1f-e6bf-4524-8c6c-a16d5ba4dfa5",
+      "comment": "",
+      "command": "if",
+      "target": "document.getElementsByClassName(\"tb-validation\").length !==0",
+      "targets": [
+        ["css=strong > div", "css:finder"],
+        ["xpath=//strong/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b32c17a-c716-4517-be3d-b8e4904ab8be",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p",
+      "targets": [],
+      "value": "Please enter your password."
+    }, {
+      "id": "9f999af2-9cee-4703-8aa9-de07ea7dbf66",
+      "comment": "",
+      "command": "elseIf",
+      "target": "document.getElementsByClassName(\"c-alert-content rounded-r-100 flex-fill v-bg-pure-white p-200 pl-none\").length !==0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7add1f45-3f34-4ba8-b714-1d8f6870f966",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=strong > div",
+      "targets": [],
+      "value": "Oops! The email or password did not match our records. Please try again."
+    }, {
+      "id": "57e5ae48-f57a-4ba6-8eac-1db7cf4fd740",
+      "comment": "",
+      "command": "elseIf",
+      "target": "document.getElementsByClassName(\"c-alert-content rounded-r-100 flex-fill v-bg-pure-white p-200 pl-none\").length !==0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17d5a0f5-6cd4-437b-9e19-b3bd43a573a4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=strong > div",
+      "targets": [],
+      "value": "Sorry, something went wrong. Please try again."
+    }, {
+      "id": "0eb2711c-e377-4f20-a442-79fb2d1b4581",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fda0a7d9-7a4e-4849-87b5-a1ae02f1c416",
+      "comment": "",
+      "command": "run",
+      "target": "1-0-0_sign-in-page-opens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "492aaa28-cbc1-4b8d-a31c-be33525c7f6a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2b2a12f3-5c45-4daf-b7c9-d3fb0ddb2920",
+    "name": "1-1-0_sign-in-page-elements-validation",
+    "commands": [{
+      "id": "ffd48be8-d2bb-4f4f-bb97-3a9c2299f9f1",
+      "comment": "",
+      "command": "run",
+      "target": "1-0-0_sign-in-page-opens",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe7fb0dd-460a-486b-ad7e-c6be19fa1fd0",
+      "comment": "",
+      "command": "if",
+      "target": "document.title=\"Sign In to Best Buy\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f759c64-7352-4e31-848d-4512d9c5c912",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=fld-e",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06dc560a-7f5f-48db-a3d6-957963c89c9c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=fld-p1",
+      "targets": [
+        ["id=fld-p1", "id"],
+        ["name=fld-p1", "name"],
+        ["css=#fld-p1", "css:finder"],
+        ["xpath=//input[@id='fld-p1']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13242161-9590-42f8-92b3-c81eea2dabf6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.c-toggle-slider",
+      "targets": [
+        ["css=.c-toggle-slider", "css:finder"],
+        ["xpath=//label/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4921f77f-1af5-42b3-894f-725e826874d9",
+      "comment": "",
+      "command": "verifyNotChecked",
+      "target": "id=show-hide-password-toggle",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "471ffa26-ed84-4f26-af7f-b1c884424703",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-toggle-slider",
+      "targets": [
+        ["css=.c-toggle-slider", "css:finder"],
+        ["xpath=//label/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4568c3d4-7b4e-4d42-ba32-48a799bbf0b1",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=show-hide-password-toggle",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d0209c3-8f84-4d5a-951f-5a4c83ac607f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-toggle-slider",
+      "targets": [
+        ["css=.c-toggle-slider", "css:finder"],
+        ["xpath=//label/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ef8d641-82a6-473f-aa24-5df35ce5675b",
+      "comment": "",
+      "command": "verifyNotChecked",
+      "target": "id=show-hide-password-toggle",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f8c7c24-6355-4711-95bc-d89bfe0377e5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.c-toggle-label",
+      "targets": [
+        ["css=.c-toggle-label", "css:finder"],
+        ["xpath=//label/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "023f350a-6d9f-4f6a-8f4a-12f24c3ee058",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Forgot your password?",
+      "targets": [
+        ["linkText=Forgot your password?", "linkText"],
+        ["css=.cia-signin__forgot > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Forgot your password?')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/identity/signin/forgotPassword?token=tid%3A63dc41c6-6f80-11ee-80e3-0637fc36c9d9')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forgot your password?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1850c0d7-1897-4310-8695-ed5f9dddb2df",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.c-button-secondary",
+      "targets": [
+        ["css=.c-button-secondary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d979ada5-bc04-4e74-9dda-1c1286d2856b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96604f4b-fd85-442a-94bc-cd1e41fc6004",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//label[contains(.,'Keep me signed in. ')]",
+      "targets": [
+        ["css=.c-checkbox-label", "css:finder"],
+        ["xpath=//div[3]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Keep me signed in. ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50ef5294-4c07-4dd0-a125-23abaa52b44f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.c-info-i-circle",
+      "targets": [
+        ["css=.c-info-i-circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "823ab885-eb6d-4de3-90f3-ca046a9ee0c2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.c-cia-divider",
+      "targets": [
+        ["css=.c-cia-divider", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57464a91-30cf-48a5-abaa-2a51a80fd692",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.webauthn-button",
+      "targets": [
+        ["css=.webauthn-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in with a Passkey')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54f2ae83-910b-44f8-b97b-2b67722e3da2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.social-button",
+      "targets": [
+        ["css=.social-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in with Apple')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95a143ba-940a-4a0e-a987-810ab9443d43",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=google-button",
+      "targets": [
+        ["id=gsi_772077_68646-overlay", "id"],
+        ["css=#gsi_772077_68646-overlay", "css:finder"],
+        ["xpath=//div[@id='gsi_772077_68646-overlay']", "xpath:attributes"],
+        ["xpath=//div[@id='gsi_772077_68646-wrapper']/div", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78271bb6-3d0a-4fc5-9fc1-33c81f085ac3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cia-disclaimer",
+      "targets": [
+        ["css=.cia-disclaimer", "css:finder"],
+        ["xpath=//div[5]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3da7b491-35d4-420b-bb08-c86f1d395fb9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Terms and Conditions",
+      "targets": [
+        ["linkText=Terms and Conditions", "linkText"],
+        ["css=.cia-disclaimer > a:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Terms and Conditions')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.bestbuy.com/site/Help-Topics/Conditions-of-Use/pcmcat204400050067.c?id=pcmcat204400050067')])[2]", "xpath:href"],
+        ["xpath=//div[5]/span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31ead38a-0112-41c1-8e58-9cdfcb03f1c9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Privacy Policy",
+      "targets": [
+        ["linkText=Privacy Policy", "linkText"],
+        ["css=.cia-disclaimer > a:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Privacy Policy')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.bestbuy.com/site/help-topics/privacy-policy/pcmcat204400050062.c?id=pcmcat204400050062')])[2]", "xpath:href"],
+        ["xpath=//div[5]/span/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "114d77ba-1327-4036-a206-8125033b36af",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=My Best Buy™ Program Terms.",
+      "targets": [
+        ["linkText=My Best Buy™ Program Terms.", "linkText"],
+        ["css=.cia-disclaimer > a:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(@href, 'https://www.bestbuy.com/site/Global-Promotions/null/pcmcat311100050001.c?id=pcmcat311100050001')])[2]", "xpath:href"],
+        ["xpath=//div[5]/span/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'My Best Buy™ Program Terms.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4d863da-0d97-4cb4-937e-ac6eb0a68839",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cia-signin__alternative-action",
+      "targets": [
+        ["css=.cia-signin__alternative-action", "css:finder"],
+        ["xpath=//div/div[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28ff29d1-4906-470e-9701-690b28915b88",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Create an account",
+      "targets": [
+        ["linkText=Create an account", "linkText"],
+        ["css=.cia-bottom-content__action", "css:finder"],
+        ["xpath=//a[contains(text(),'Create an account')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.bestbuy.com/identity/newAccount?token=tid%3A63dc41c6-6f80-11ee-80e3-0637fc36c9d9')]", "xpath:href"],
+        ["xpath=//div[6]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ce5b521-5df5-408f-9605-8a97a344006a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.c-info-i",
+      "targets": [
+        ["css=.c-info-i-circle", "css:finder"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "0aef4974-b642-4733-8391-b3895479da0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-info-i",
+      "targets": [
+        ["css=.c-info-i-circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "430e7630-e1cc-4e47-b758-2cccf118b351",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=popover-remember-me",
+      "targets": [
+        ["id=popover-remember-me", "id"],
+        ["css=#popover-remember-me", "css:finder"],
+        ["xpath=//div[@id='popover-remember-me']", "xpath:attributes"],
+        ["xpath=//span/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "23f0ad87-a92c-4997-ad88-f875ef6cce13",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#popover-remember-me > div > div",
+      "targets": [
+        ["css=#popover-remember-me > div > div", "css:finder"],
+        ["xpath=//div[@id='popover-remember-me']/div/div", "xpath:idRelative"],
+        ["xpath=//span/div/div/div", "xpath:position"]
+      ],
+      "value": "We'll keep you signed in on this device. For your account's security, we'll still ask for your password if you're updating sensitive information. Use this option only on your personal computer or device."
+    }, {
+      "id": "d93c52b2-8003-45b9-b24c-d1bef92ed351",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-close-icon-svg",
+      "targets": [
+        ["css=.c-close-icon-svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe4bffab-51bf-43ef-ae97-df581e4df92c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Forgot your password?",
+      "targets": [
+        ["linkText=Forgot your password?", "linkText"],
+        ["css=.cia-signin__forgot > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Forgot your password?')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/identity/signin/forgotPassword?token=tid%3Ad929576d-6f86-11ee-80e3-0637fc36c9d9')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Forgot your password?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6ef371a-cfc3-4f7c-a98b-6c7ae6868612",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancel",
+      "targets": [
+        ["linkText=Cancel", "linkText"],
+        ["css=.cia-cancel", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancel')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/identity/signin/?token=tid%3Ad929576d-6f86-11ee-80e3-0637fc36c9d9')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c59772a-5ca1-4199-853e-ba533da494c7",
+      "comment": "",
+      "command": "verifyNotChecked",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2af3dce0-19c8-4585-9ac3-e3b0dced6b64",
+      "comment": "",
+      "command": "click",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "218bc7ea-f241-4ca0-9aa7-adbea178b513",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d9803e5-21f2-4567-8283-f4071abefff7",
+      "comment": "",
+      "command": "click",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bed9c31-1e6e-4ab1-8e5a-55d10de9cfac",
+      "comment": "",
+      "command": "verifyNotChecked",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bdf5765-82c0-4d78-adab-be6d06463e70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-checkbox-label",
+      "targets": [
+        ["css=.c-checkbox-label", "css:finder"],
+        ["xpath=//div[3]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Keep me signed in. ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f80e05c4-4451-4ea7-91c0-d0bacf81e0a8",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd0deded-1ce0-4a08-aece-795c7ec26274",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-checkbox-label",
+      "targets": [
+        ["css=.c-checkbox-label", "css:finder"],
+        ["xpath=//div[3]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Keep me signed in. ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9ddd7c5-9257-4030-a84a-c89f5f7890a9",
+      "comment": "",
+      "command": "verifyNotChecked",
+      "target": "id=cia-remember-me",
+      "targets": [
+        ["id=cia-remember-me", "id"],
+        ["css=#cia-remember-me", "css:finder"],
+        ["xpath=//input[@id='cia-remember-me']", "xpath:attributes"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b37de2bd-7c7f-44c0-8513-1aa0b29f7116",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create an account",
+      "targets": [
+        ["linkText=Create an account", "linkText"],
+        ["css=.cia-bottom-content__action", "css:finder"],
+        ["xpath=//a[contains(text(),'Create an account')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.bestbuy.com/identity/newAccount?token=tid%3A6d2d6537-6f8c-11ee-98e3-024e3459a461')]", "xpath:href"],
+        ["xpath=//div[6]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create an account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0671992-acc8-489b-b718-212ef16e9b9d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.c-section-title",
+      "targets": [
+        ["css=.c-section-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Create an Account')]", "xpath:innerText"]
+      ],
+      "value": "Create an Account"
+    }, {
+      "id": "7d0756f1-b268-4f09-a990-1cfe4937efe3",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "43a148ad-c31c-443d-a197-4d43ccb2a064",
+    "name": "1-0-0_sign-in-page-opens",
+    "commands": [{
+      "id": "156baf4c-0f0c-421b-9782-47985615dc61",
+      "comment": "",
+      "command": "run",
+      "target": "0-0-0_test-url",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3abde023-c90f-4270-b72f-d40f3f3a6d29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-p-right-xxs:nth-child(2)",
+      "targets": [
+        ["css=.v-p-right-xxs:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='account-menu-account-button']/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93dc3d16-97ce-4859-ae29-b0e435831287",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign In",
+      "targets": [
+        ["linkText=Sign In", "linkText"],
+        ["css=.sign-in-btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign In')]", "xpath:link"],
+        ["xpath=//div[@id='shop-account-menu-8233218']/div/div/div/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/identity/global/signin')]", "xpath:href"],
+        ["xpath=//li/div/div/div/div/div/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d5a0ed7-a5af-4a77-8889-ee7b32351987",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.c-section-title",
+      "targets": [
+        ["css=.c-section-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Sign In to Best Buy')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "6e846607-9431-4bc6-8874-7a429179bde4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.c-button-secondary",
+      "targets": [
+        ["css=.c-button-secondary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }]
+  }],
+  "suites": [{
+    "id": "6c502807-4ba3-428e-9232-1b70214ddf1e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "834d4eba-2ad8-4a11-b4ed-de58fd46fde4",
+    "name": "Test data",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1b207dee-162b-4cab-894d-fd2ba307f976", "24a2cc37-0abd-4cf5-8f64-f6905d332a05"]
+  }, {
+    "id": "c18f0a5c-56aa-4c72-b70e-a11fb96b7986",
+    "name": "Sign In",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["43a148ad-c31c-443d-a197-4d43ccb2a064", "2b2a12f3-5c45-4daf-b7c9-d3fb0ddb2920", "0786cc54-76c5-427b-a75c-2eab351e6cd8", "e61fe068-997b-4a51-9346-3f506774af55", "d171aefb-6664-41df-bbf2-dee5627e7393", "d0c5d8e8-07c4-4466-8fbb-c344d482829c", "7fbcbb75-186c-4281-9902-c5873d14a399"]
+  }],
+  "urls": ["https://www.bestbuy.com/"],
+  "plugins": []
+}
